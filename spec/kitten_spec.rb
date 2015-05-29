@@ -6,54 +6,17 @@ RSpec.describe "A kitten" do
     expect(ENV["guilty"]).to be_falsey
   end
 
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
-  it "is fond of tautology" do
-    expect(true).to be_truthy
-  end
-
+  it("is fluffy")               {  }
+  it("likes string")            {  }
+  it("fears hoovers")           {  }
+  it("likes laser pointers")    {  }
+  it("is cute")                 {  }
+  it("meows")                   {  }
+  it("purrs")                   {  }
+  it("likes being skritched")   {  }
+  it("loves catnip")            {  }
+  it("sits in cardboard boxes") {  }
+  
   it "WILL DESTROY EVERYTHING YOU HOLD DEAR, MUHAHAHAHAHAHAAAAA" do
     ENV["guilty"] = "true"
   end

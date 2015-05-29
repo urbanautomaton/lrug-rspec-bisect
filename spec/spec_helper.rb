@@ -7,8 +7,8 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  config.filter_run :focus
-  config.run_all_when_everything_filtered = true
+  # config.filter_run :focus
+  # config.run_all_when_everything_filtered = true
 
   config.example_status_persistence_file_path = ".spec_results"
 
@@ -16,9 +16,9 @@ RSpec.configure do |config|
 
   config.warnings = true
 
-  if config.files_to_run.one?
-    config.default_formatter = 'doc'
-  end
+  # if config.files_to_run.one?
+  #   config.default_formatter = 'doc'
+  # end
 
   config.order = :random
   Kernel.srand config.seed
