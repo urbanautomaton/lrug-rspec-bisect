@@ -1,3 +1,14 @@
+# Outline
+
+* Intro
+* Order dependent failures
+* Bisection:
+  - Fix order
+  1. Remove half of the preceding tests
+  2. rerun tests
+    * pass: remove *other* half, goto 2)
+    * fail: goto 1) with remaining tests
+
 
 So I'm here because of a bet, that I couldn't pitch and deliver a talk
 about a single command-line flag for a single executable.

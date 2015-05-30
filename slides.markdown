@@ -1,93 +1,161 @@
+# [fit] Test Bisection
 
-# [fit] Bisecting Kittens
-
----
-
-# [fit] 10 minutes
-# [fit] an unreleased command-line flag
+![filter](images/bison.jpg)
 
 ---
 
-![](images/atom_bomb.jpg)
+# Order-Dependent
+# Test Failures
 
-# `$ git commit --atrocities`[^1]
+---
 
-[^1]:
-[https://twitter.com/whitequark/status/589958268623151104](https://twitter.com/whitequark/status/589958268623151104)
+![inline](images/suite_pass.png)
+
+---
+
+![inline](images/suite_fail.png)
+
+---
+
+![inline](images/suite_fail_big.png)
+
+---
+
+# Bisection Algorithm
+
+1. Fix order
+2. Remove half the tests preceding the failure
+3. Rerun the remainder
+  - **pass**: remove the **other** half, goto **3**
+  - **fail**: goto **2** with remaining tests
+
+---
+
+![inline](images/alg_1.png)
+
+---
+
+![inline](images/alg_2.png)
+
+---
+
+![inline](images/alg_3.png)
+
+---
+
+![inline](images/alg_4.png)
+
+---
+
+![inline](images/alg_5.png)
+
+---
+
+![inline](images/alg_6.png)
+
+---
+
+![inline](images/alg_7.png)
+
+---
+
+![inline](images/alg_8.png)
+
+---
+
+![inline](images/alg_9.png)
+
+---
+
+![inline](images/alg_10.png)
+
+---
+
+![inline](images/alg_11.png)
+
+---
+
+# [fit] Booooooring
+
+---
+
+# [fit] Booooooring
+
+# (also, hard)
 
 ---
 
 ![](images/bison.jpg)
 
-# `$ rspec --bisect`
+# [fit] `$ rspec --bisect`
+
+^ Can I hide this? [^1]
+
+[^1]:
+[https://github.com/rspec/rspec-core/pull/1917](https://github.com/rspec/rspec-core/pull/1917)
 
 ---
 
-![filter](images/kitten.jpg)
-
-# Kitten Spec
+![inline](images/kitten_spec.png)
 
 ---
-
-# A passing suite
-
-![](images/kitten.jpg)
 
 ![inline](images/rspec_bisect_pass.png)
 
 ---
 
-# A passing suite?
-
-![filter](images/kitten.jpg)
-
 ![inline](images/rspec_fail.png)
 
 ---
 
-![filter](images/kitten.jpg)
-
-![inline](images/rspec_fail_doc.png)
+![inline](images/rspec_fail_seed.png)
 
 ---
 
-# Bisect to the rescue!
-
-![filter](images/kitten.jpg)
-
-![inline](images/rspec_bisect_output.png)
+![inline](images/rspec_fail_fix_order_not_fast.png)
 
 ---
 
-# Bisect to the rescue!
-
-![filter](images/kitten.jpg)
-
-![inline](images/rspec_minimal_repro.png)
+![inline](images/rspec_fail_fix_order.png)
 
 ---
 
-```ruby
-RSpec.describe "A kitten" do
+![inline](images/rspec_failing_command.png)
 
-  it "is totally innocent" do
-    expect(ENV["guilty"]).to be_falsey
-  end
+---
 
-  it("is fluffy")               {  }
-  it("likes string")            {  }
-  it("fears hoovers")           {  }
-  it("likes laser pointers")    {  }
-  it("is cute")                 {  }
-  it("meows")                   {  }
-  it("purrs")                   {  }
-  it("likes being skritched")   {  }
-  it("loves catnip")            {  }
-  it("sits in cardboard boxes") {  }
-  
-  it "WILL DESTROY EVERYTHING YOU HOLD DEAR, MUHAHAHAHAHAHAAAAA" do
-    ENV["guilty"] = "true"
-  end
+![inline](images/bisect_run_1.png)
 
-end
-```
+
+---
+
+![inline](images/bisect_run_2.png)
+
+---
+
+![inline](images/bisect_run_3.png)
+
+---
+
+![inline](images/bisect_run_4.png)
+
+---
+
+![inline](images/bisect_run_5.png)
+
+---
+
+![inline](images/bisect_run_6.png)
+
+---
+
+![inline](images/bisect_run_7.png)
+
+---
+
+![inline](images/bisect_reproduction.png)
+
+---
+
+![inline](images/bisect_reproduction_doc.png)
+
