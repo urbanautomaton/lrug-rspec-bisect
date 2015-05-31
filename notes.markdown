@@ -8,6 +8,14 @@
   2. rerun tests
     * pass: remove *other* half, goto 2)
     * fail: goto 1) with remaining tests
+* diagram
+* RSpec sorting
+* Example suite
+* Passing run
+* Failing run!
+* Fix order, fail fast
+* RSpec ordering digression
+* Bisect!
 
 
 So I'm here because of a bet, that I couldn't pitch and deliver a talk
