@@ -32,3 +32,9 @@ repel crocodiles or anything.
 * Automated bisection
   - binary search, exactly as if we were button pressers
 
+
+USE THIS FOR RSPEC BISECT
+
+https://dwigif.appspot.com/
+
+WITH THE BISON
